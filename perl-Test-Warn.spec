@@ -3,8 +3,8 @@
 %bcond_with	tests	# perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	Test
-%define	pnam	Warn
+%define		pdir	Test
+%define		pnam	Warn
 Summary:	Test::Warn - Perl extension to test methods for warnings
 Summary(pl):	Test::Warn - rozszerzenie Perla do testowania metod pod k±tem ostrze¿eñ
 Name:		perl-Test-Warn
