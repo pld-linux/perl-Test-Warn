@@ -1,11 +1,12 @@
-
+#
 #Conditional build:
 %bcond_with	tests	# perform "make test"
-
+#
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Test
 %define	pnam	Warn
-Summary:	Perl extension to test methods for warnings
+Summary:	Test::Warn - Perl extension to test methods for warnings
+Summary(pl):	Test::Warn - rozszerzenie Perla do testowania metod pod k±tem ostrze¿eñ
 Name:		perl-Test-Warn
 Version:	0.08
 Release:	1
@@ -13,16 +14,16 @@ License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	95fa7fa694f00ec414a877ae4ef65d7b
-BuildRequires:	perl-devel >= 5.6
-BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
-BuildRequires:	perl-Test-Exception
 BuildRequires:	perl-Array-Compare
+BuildRequires:	perl-Sub-Uplevel
 BuildRequires:	perl(Test::Builder) => 0.13
 BuildRequires:	perl-Test-Builder-Tester
-BuildRequires:	perl-Sub-Uplevel
+BuildRequires:	perl-Test-Exception
 BuildRequires:	perl-Tree-DAG_Node
 %endif
+BuildRequires:	perl-devel >= 5.8.0
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -31,8 +32,8 @@ This module provides a few convenience methods for testing warning
 based code.
 
 %description -l pl
-Ten modu³ udostêpnia kilka wygodnych metod, przydatnych przy testowaniu
-kodu, opartego na ostrze¿eniach.
+Ten modu³ udostêpnia kilka wygodnych metod, przydatnych przy
+testowaniu kodu, opartego na ostrze¿eniach.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
@@ -41,6 +42,7 @@ kodu, opartego na ostrze¿eniach.
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
 %{__make}
+
 %{?with_tests:%{__make} test}
 
 %install
