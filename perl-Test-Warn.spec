@@ -19,7 +19,7 @@ Summary(sv):	%{pdir}::%{pnam} Perlmodul
 Summary(uk):	Модуль для Perl %{pdir}::%{pnam}
 Summary(zh_CN):	%{pdir}::%{pnam} Perl дё©И
 Name:		perl-%{pdir}-%{pnam}
-Version:	0.04
+Version:	0.06
 Release:	1
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
