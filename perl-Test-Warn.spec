@@ -10,7 +10,8 @@ Summary(pl):	Test::Warn - rozszerzenie Perla do testowania metod pod k±tem ostrz
 Name:		perl-Test-Warn
 Version:	0.08
 Release:	1
-License:	GPL/Artistic
+# same as perl
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	95fa7fa694f00ec414a877ae4ef65d7b
