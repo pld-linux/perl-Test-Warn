@@ -13,8 +13,9 @@ Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Test/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	95fa7fa694f00ec414a877ae4ef65d7b
+URL:		http://search.cpan.org/dist/Test-Warn/
 %if %{with tests}
 BuildRequires:	perl-Array-Compare
 BuildRequires:	perl-Sub-Uplevel
@@ -58,6 +59,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc Change*
-%{perl_vendorlib}/%{pdir}/%{pnam}.pm
+%doc Changes
+%{perl_vendorlib}/Test/Warn.pm
 %{_mandir}/man3/*
