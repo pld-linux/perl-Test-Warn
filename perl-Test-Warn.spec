@@ -1,6 +1,6 @@
 #
 #Conditional build:
-%bcond_with	tests	# perform "make test"
+%bcond_without	tests	# perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Test
@@ -19,13 +19,14 @@ URL:		http://search.cpan.org/dist/Test-Warn/
 %if %{with tests}
 BuildRequires:	perl-Array-Compare
 BuildRequires:	perl-Sub-Uplevel
-BuildRequires:	perl(Test::Builder) => 0.13
+BuildRequires:	perl(Test::Builder) >= 0.13
 BuildRequires:	perl-Test-Builder-Tester
 BuildRequires:	perl-Test-Exception
 BuildRequires:	perl-Tree-DAG_Node
 %endif
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+Requires:	perl(Test::Builder) >= 0.13
 Requires:	perl-Tree-DAG_Node
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
