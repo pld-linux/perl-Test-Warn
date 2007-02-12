@@ -6,7 +6,7 @@
 %define		pdir	Test
 %define		pnam	Warn
 Summary:	Test::Warn - Perl extension to test methods for warnings
-Summary(pl):	Test::Warn - rozszerzenie Perla do testowania metod pod k±tem ostrze¿eñ
+Summary(pl.UTF-8):   Test::Warn - rozszerzenie Perla do testowania metod pod kÄ…tem ostrzeÅ¼eÅ„
 Name:		perl-Test-Warn
 Version:	0.08
 Release:	2
@@ -35,9 +35,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 This module provides a few convenience methods for testing warning
 based code.
 
-%description -l pl
-Ten modu³ udostêpnia kilka wygodnych metod, przydatnych przy
-testowaniu kodu, opartego na ostrze¿eniach.
+%description -l pl.UTF-8
+Ten moduÅ‚ udostÄ™pnia kilka wygodnych metod, przydatnych przy
+testowaniu kodu, opartego na ostrzeÅ¼eniach.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
