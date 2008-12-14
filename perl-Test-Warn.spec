@@ -8,13 +8,13 @@
 Summary:	Test::Warn - Perl extension to test methods for warnings
 Summary(pl.UTF-8):	Test::Warn - rozszerzenie Perla do testowania metod pod kątem ostrzeżeń
 Name:		perl-Test-Warn
-Version:	0.10
+Version:	0.11
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Test/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	17557bbc8eefadf9f088ae4ab73e9976
+# Source0-md5:	1000ef6d94b54ca9eb75fb994a7e8bec
 URL:		http://search.cpan.org/dist/Test-Warn/
 %if %{with tests}
 BuildRequires:	perl-Array-Compare
