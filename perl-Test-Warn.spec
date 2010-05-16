@@ -25,6 +25,7 @@ BuildRequires:	perl-Tree-DAG_Node
 %endif
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+BuildRequires:	unzip
 Requires:	perl(Test::Builder) >= 0.13
 Requires:	perl-Tree-DAG_Node
 BuildArch:	noarch
