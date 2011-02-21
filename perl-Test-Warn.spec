@@ -1,5 +1,5 @@
 #
-#Conditional build:
+# Conditional build:
 %bcond_without	tests	# perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
@@ -8,12 +8,12 @@
 Summary:	Test::Warn - Perl extension to test methods for warnings
 Summary(pl.UTF-8):	Test::Warn - rozszerzenie Perla do testowania metod pod kątem ostrzeżeń
 Name:		perl-Test-Warn
-Version:	0.21
+Version:	0.22
 Release:	1
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://search.cpan.org/CPAN/authors/id/C/CH/CHORNY/%{pdir}-%{pnam}-%{version}.zip
-# Source0-md5:	d33c38d18d2bedac52bfdbaf94c8744d
+Source0:	http://www.cpan.org/modules/by-module/Test/CHORNY/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	bfff5f43097debdef0cbe9047bd38853
 URL:		http://search.cpan.org/dist/Test-Warn/
 %if %{with tests}
 BuildRequires:	perl-Array-Compare
@@ -25,7 +25,6 @@ BuildRequires:	perl-Tree-DAG_Node
 %endif
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
-BuildRequires:	unzip
 Requires:	perl(Test::Builder) >= 0.13
 Requires:	perl-Tree-DAG_Node
 BuildArch:	noarch
@@ -62,4 +61,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc Changes
 %{perl_vendorlib}/Test/Warn.pm
-%{_mandir}/man3/*
+%{_mandir}/man3/Test::Warn.3pm*
