@@ -16,10 +16,8 @@ Source0:	http://www.cpan.org/modules/by-module/Test/CHORNY/%{pdir}-%{pnam}-%{ver
 # Source0-md5:	a27990b62f8fd0aa290bb617ae0157a5
 URL:		http://search.cpan.org/dist/Test-Warn/
 %if %{with tests}
-BuildRequires:	perl-Carp >= 1.22
 BuildRequires:	perl-Sub-Uplevel >= 0.12
 BuildRequires:	perl(Test::Builder) >= 0.13
-BuildRequires:	perl-Test-Builder-Tester >= 1.02
 BuildRequires:	perl-Tree-DAG_Node >= 1.02
 %endif
 BuildRequires:	perl-devel >= 1:5.8.0
