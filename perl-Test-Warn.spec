@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_without	tests	# perform "make test"
 #
-%include	/usr/lib/rpm/macros.perl
 %define		pdir	Test
 %define		pnam	Warn
 Summary:	Test::Warn - Perl extension to test methods for warnings
